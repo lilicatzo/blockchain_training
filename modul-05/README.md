@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+## Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains multiple modules related to blockchain development. Below is a brief description of the modules:
 
-## Available Scripts
+- **modul-03**: Contains Solidity code for smart contract development.
+- **modul-04**: Contains additional Solidity code for advanced smart contract features.
+- **modul-05**: Contains a web application interacting with a particular hardcoded smart contract using `ethers.js`. This module is the focus of this README.
 
-In the project directory, you can run:
+## Setup Instructions for modul-05
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make sure you have the following installed on your machine:
+- Node.js (v14.x or higher)
+- npm (v6.x or higher)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Step-by-Step Guide
 
-### `npm test`
+1. **Clone the Repository**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone https://github.com/lilicatzo/blockchain_training.git
+    cd blockchain_training
+    ```
 
-### `npm run build`
+2. **Navigate to `modul-05` Directory**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    cd modul-05
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Install Dependencies**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Run the following command to install all necessary dependencies:
 
-### `npm run eject`
+    ```bash
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Create `.env` File**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Create a `.env` file in the `modul-05` directory with the following template:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```plaintext
+    REACT_APP_CONTRACT_ADDRESS=0xe4EE33F790f790950E0064E0E5aC474BE36d577F
+    REACT_APP_ETHERSCAN_API_KEY=your_etherscan_api_key
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    Replace `your_etherscan_api_key` with your actual Etherscan API key.
 
-## Learn More
+5. **Run the Application**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Start the application by running:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    npm start
+    ```
 
-### Code Splitting
+    This will start the development server and open the application in your default web browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Using the `makeMove` Function
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+To use the `makeMove` function within the application, you will need to:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Connect MetaMask**
 
-### Advanced Configuration
+    Ensure you have the MetaMask extension installed in your web browser and are connected to your Ethereum wallet.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. **Execute a Move**
 
-### Deployment
+    When you execute a move, you will be prompted by MetaMask to confirm the transaction and pay the necessary gas fees.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    **Note**: Each move requires a small amount of ETH to cover the gas fees for the transaction on the Ethereum blockchain.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
